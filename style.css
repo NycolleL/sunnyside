@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
 :root{
     --text-font: 'Barlow', sans-serif;
     --title-font: 'Fraunces', serif;
@@ -13,7 +23,8 @@
     --white: #ffffff;
     --graphic-text: #25564b;
     --photography-text: #19536b;
-    --footer-bg: #458c7e;
+    --footer-bg: #90D4C5;
+    --footer-text: #2C7566;
     --body-bg:#FFFBF8;
 }
 
@@ -46,7 +57,7 @@ header h1{
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 900;
-    place-self: center;
+    place-self:  start center;
     text-align: center;
     letter-spacing: .5rem;
 }
@@ -80,7 +91,6 @@ header .arrow-down{
     color: var(--gray);
     width: 375px;
     text-align: center;
-    line-height: 2rem;
     padding: 0px 16px;
 }
 
@@ -182,6 +192,13 @@ header .arrow-down{
 .client__avatar.client1{
     background-image: url(./images/image-emily.jpg);
 }
+.client__avatar.client2{
+    background-image: url(./images/image-thomas.jpg);
+}
+
+.client__avatar.client3{
+    background-image: url(./images/image-jennie.jpg);
+}
 
 .client__text{
     font-size: 1.2rem;
@@ -204,10 +221,40 @@ header .arrow-down{
     font-size: 1rem;
 }
 
-.client__avatar.client2{
-    background-image: url(./images/image-thomas.jpg);
+.images{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.client__avatar.client3{
-    background-image: url(./images/image-jennie.jpg);
+footer{
+    width: 100vw;
+    background-color: var(--footer-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0px;
+    gap: 36px;
+}
+
+footer h2{
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--footer-text);
+}
+
+footer nav ul{
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    font-weight: 600;
+    color: var(--footer-text);
+}
+
+footer>ul{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 48px;
 }
